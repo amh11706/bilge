@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bilge"
+    }
+  },
+  "defaultProject": "bilge",
+  "cli": {
+    "analytics": "727bfce8-e8ac-4dc5-997f-a59f28f1014c"
+  }
 }
