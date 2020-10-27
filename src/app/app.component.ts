@@ -28,6 +28,34 @@ export class AppComponent {
 
   constructor() {
     this.buildTiles();
+
+    document.addEventListener('keydown', this.handleKey);
+  }
+
+  private handleKey = (e: KeyboardEvent) => {
+    switch (e.key) {
+      case ' ': return this.swapTiles();
+      case 'w':
+        if (this.cursor.y > 0) {
+          this.cursor.y--;
+        }
+        break;
+      case 'a':
+        if (this.cursor.x > 0) {
+          this.cursor.x--;
+        }
+        break;
+      case 's':
+        if (this.cursor.y < this.HEIGHT - 1) {
+          this.cursor.y++;
+        }
+        break;
+      case 'd':
+        if (this.cursor.x < this.WIDTH - 2) {
+          this.cursor.x++;
+        }
+        break;
+    }
   }
 
   buildTiles(): void {
